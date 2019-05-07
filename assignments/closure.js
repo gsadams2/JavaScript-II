@@ -1,9 +1,14 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+const name = "My name is George, yo";
+function nameYo() {
+  return name;
+}
+
+console.log(nameYo());
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
-
 
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
