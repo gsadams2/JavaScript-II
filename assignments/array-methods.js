@@ -507,10 +507,30 @@ console.log(ticketPriceTotal);
 
 console.log(runners.length);
 
-let ticketAverage =
-  runners.reduce((total, averageYo) => total + averageYo) / 50;
+let ticketAverage = function() {
+  let totalG = runners.reduce(function(total, averageYo) {
+    return total + averageYo.donation;
+  }, 0);
 
-console.log(ticketAverage);
-// Problem 2
+  return totalG / runners.length;
+};
 
-// Problem 3
+console.log(ticketAverage());
+
+// Problem 2 - return only the id of each runner
+
+let idOnly = runners.map(function(idYo) {
+  return idYo.id;
+});
+
+console.log(idOnly);
+
+// Problem 3 - create an array with big ballers aka people who donated above $150.
+
+let bigBallersOnly = runners.filter(function(ballersYo) {
+  if (ballersYo.donation > 150) {
+    return ballersYo.donation;
+  }
+});
+
+console.log(bigBallersOnly);
